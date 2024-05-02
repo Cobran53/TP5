@@ -109,6 +109,13 @@ class Test {
                 new Rectangle(10, 10, 50, 50)
             )   
         )  */
+        // 4 tests du 5.9 :
+        /*
+        Groupe(Pointillé(Gras(Cercle)),Rectangle)
+        Groupe(Cercle,Pointillé(Bleu(Rectangle)))
+        Rouge(Pointillé(Groupe(Cercle,Gras(Rectangle))))
+        Gras(Pointillé(Rectangle))
+        */  
         MaFenetre fen = new MaFenetre(
             new Rouge (
                 new Gras (
