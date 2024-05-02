@@ -31,6 +31,19 @@ class Paneau extends JPanel {
 }
 
 
+class Bleu extends ColoredFigure {
+    
+    Bleu(Figure f) {
+        super(f, new Color(0,0,255));
+    }
+}
+
+class Rouge extends ColoredFigure {
+    
+    Rouge(Figure f) {
+        super(f, new Color(255,0,0));
+    }
+}
 
 
 class Test {
@@ -38,12 +51,18 @@ class Test {
     public static void main(String[] args){
 
         MaFenetre fen = new MaFenetre(
-            new Groupe (
+            /* new Bleu(
+                new Groupe (
+                    new Rectangle(10, 10, 50, 50), 
+                    new Cercle(10, 10, 50)
+                )
+            ) */ // on s'attend à avoir un cercle bleu dans un carré bleu, et on a bien ça
+            new Groupe(
                 new Rectangle(10, 10, 50, 50), 
-                new Cercle(10, 10, 50)
-            )
+                new Rouge(new Cercle(10, 10, 50))
+            ) // on s'attend à avoir un cercle rouge dans un carré noir, et on a bien ça
         );
-        
+
         fen.setVisible(true);
         fen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

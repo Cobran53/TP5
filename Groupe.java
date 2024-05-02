@@ -13,4 +13,6 @@ public class Groupe implements Figure {
         a.draw(g);
         b.draw(g);
     }
+
+    
 }
