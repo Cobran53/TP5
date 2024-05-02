@@ -134,18 +134,28 @@ class Test {
                 )
             )
         )  */
-        // 3) on s'attend à un cercle rouge pointillé et un carré rouge gras pointillé
-        Rouge(Pointillé(Groupe(Cercle,Gras(Rectangle))))
-
-        MaFenetre fen = new MaFenetre(
-            new Groupe (
-                new Cercle(10, 10, 50),
-                new Pointille (
-                    new Rouge(
-                        new Rectangle(10, 10, 50, 50)
+        // 3) on s'attend à un cercle rouge pointillé et un carré rouge gras pointillé. Le carré n'est pas pointillé.
+        /* new Rouge(
+                new Pointille(  
+                    new Groupe (
+                        new Cercle(10, 10, 50),
+                        new Gras (
+                            new Rectangle(10, 10, 50, 50)
+                        )
                     )
                 )
-            ) 
+            ) */
+        MaFenetre fen = new MaFenetre(
+            /* new Rouge(
+                new Pointille(  
+                    new Groupe (
+                        new Cercle(10, 10, 50),
+                        new Gras (
+                            new Rectangle(10, 10, 50, 50)
+                        )
+                    )
+                )
+            ) */
         );
 
         fen.setVisible(true);
