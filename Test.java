@@ -109,18 +109,42 @@ class Test {
                 new Rectangle(10, 10, 50, 50)
             )   
         )  */
-        // 4 tests du 5.9 :
+        // Les 4 tests du 5.9 :
         /*
-        Groupe(Pointillé(Gras(Cercle)),Rectangle)
+        Groupe(Pointillé(Rouge(Cercle)),Rectangle)
         Groupe(Cercle,Pointillé(Bleu(Rectangle)))
         Rouge(Pointillé(Groupe(Cercle,Gras(Rectangle))))
         Gras(Pointillé(Rectangle))
         */  
-        MaFenetre fen = new MaFenetre(
-            new Rouge (
-                new Gras (
+        // 1) On s'attend à un cercle rouge en pointillé, et un carré noir à ligne entière. Le carré est rouge en pointillé.
+        /* new Groupe (
+                new Pointille (
+                    new Rouge(
+                        new Cercle(10, 10, 50)
+                    )
+                ),
+                new Rectangle(10, 10, 50, 50)
+            )  */
+        // 2) on s'attend à un cercle noir entier, et un carré rouge en pointillé. on a bien ça
+        /* new Groupe (
+            new Cercle(10, 10, 50),
+            new Pointille (
+                new Rouge(
                     new Rectangle(10, 10, 50, 50)
-                )   
+                )
+            )
+        )  */
+        // 3) on s'attend à un cercle rouge pointillé et un carré rouge gras pointillé
+        Rouge(Pointillé(Groupe(Cercle,Gras(Rectangle))))
+
+        MaFenetre fen = new MaFenetre(
+            new Groupe (
+                new Cercle(10, 10, 50),
+                new Pointille (
+                    new Rouge(
+                        new Rectangle(10, 10, 50, 50)
+                    )
+                )
             ) 
         );
 
