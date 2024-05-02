@@ -134,8 +134,17 @@ class Test {
                 )
             )
         )  */
-        // 3) on s'attend à un cercle rouge pointillé et un carré rouge gras pointillé
-
+        // 3) on s'attend à un cercle rouge pointillé et un carré rouge gras pointillé. Le carré n'est pas pointillé.
+        /* new Rouge(
+                new Pointille(  
+                    new Groupe (
+                        new Cercle(10, 10, 50),
+                        new Gras (
+                            new Rectangle(10, 10, 50, 50)
+                        )
+                    )
+                )
+            ) */
         MaFenetre fen = new MaFenetre(
             new Gras(
                 new Pointille(

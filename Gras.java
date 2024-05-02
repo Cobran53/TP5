@@ -1,7 +1,7 @@
 import java.awt.BasicStroke;
 import java.awt.Graphics2D;
 
-public class Gras implements Figure {   //on récupère une figure et son épaisseur (on a défini un gras de largeur 5)
+public class Gras implements Figure {   //on récupère une figure
     Figure f;
 
     Gras(Figure _f) {
@@ -9,7 +9,7 @@ public class Gras implements Figure {   //on récupère une figure et son épais
     }
     
     @Override
-    public void draw(Graphics2D g) {    //on met la figure en gras puis on la trace
+    public void draw(Graphics2D g) {    //on met la figure en gras avec une épaisseur (on a défini un gras de largeur 5) puis on la trace
         g.setStroke(new BasicStroke(5));
         f.draw(g);
     }
