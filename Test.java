@@ -50,17 +50,39 @@ class Test {
 
     public static void main(String[] args){
 
-        MaFenetre fen = new MaFenetre(
-            /* new Bleu(
-                new Groupe (
-                    new Rectangle(10, 10, 50, 50), 
-                    new Cercle(10, 10, 50)
-                )
-            ) */ // on s'attend à avoir un cercle bleu dans un carré bleu, et on a bien ça
-            new Groupe(
+        // liste de test pour 4.5
+        // 1) on s'attend à avoir un cercle bleu dans un carré bleu, et on a bien ça
+        /* new Bleu(
+            new Groupe (
                 new Rectangle(10, 10, 50, 50), 
-                new Rouge(new Cercle(10, 10, 50))
-            ) // on s'attend à avoir un cercle rouge dans un carré noir, et on a bien ça
+                new Cercle(10, 10, 50)
+            )
+        ) */ 
+        // 2) on s'attend à avoir un cercle bleu dans un carré noir, et on a bien ça
+        /* new Groupe(
+            new Rectangle(10, 10, 50, 50), 
+            new Bleu(new Cercle(10, 10, 50))
+        ) */ 
+        // 3) on s'attend à avoir un cercle bleu dans un carré noir, et on a un cercle bleu dans un carré bleu à la place.
+        /* new Groupe(
+            new Bleu(new Cercle(10, 10, 50)),
+            new Rectangle(10, 10, 50, 50)
+        )  */
+        // 4) on s'attend à avoir un cercle bleu dans un carré bleu, et on a bien ça
+        /* new Rouge(
+            new Groupe(
+                new Bleu(new Cercle(10, 10, 50)),
+                new Rectangle(10, 10, 50, 50)
+            )
+        ) */
+
+        MaFenetre fen = new MaFenetre(
+            new Rouge(
+                new Groupe(
+                    new Bleu(new Cercle(10, 10, 50)),
+                    new Rectangle(10, 10, 50, 50)
+                )
+            )
         );
 
         fen.setVisible(true);
