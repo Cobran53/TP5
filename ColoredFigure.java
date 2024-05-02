@@ -1,7 +1,7 @@
 import java.awt.Color;
 import java.awt.Graphics2D;
 
-public class ColoredFigure implements Figure {
+public class ColoredFigure implements Figure {  //on récupère une couleur et une Figure 
     Color c;
     Figure f;
 
@@ -11,7 +11,7 @@ public class ColoredFigure implements Figure {
     }
 
     @Override
-    public void draw(Graphics2D g) {
+    public void draw(Graphics2D g) {    // on applique la couleur puis on trace la figure
         g.setColor(c);
         f.draw(g);
     }

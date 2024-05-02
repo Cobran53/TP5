@@ -31,14 +31,14 @@ class Paneau extends JPanel {
 }
 
 
-class Bleu extends ColoredFigure {
+class Bleu extends ColoredFigure {  //on définit Bleu une impémentation spéciale de ColoredFigure qui colore en bleu
     
     Bleu(Figure f) {
         super(f, new Color(0,0,255));
     }
 }
 
-class Rouge extends ColoredFigure {
+class Rouge extends ColoredFigure { //on définit Rouge une impémentation spéciale de ColoredFigure qui colore en rouge
     
     Rouge(Figure f) {
         super(f, new Color(255,0,0));
