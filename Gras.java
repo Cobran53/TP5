@@ -10,7 +10,7 @@ public class Gras implements Figure {   //on récupère une figure et son épais
     
     @Override
     public void draw(Graphics2D g) {    //on met la figure en gras puis on la trace
-        g.setStroke(s);
+        g.setStroke(new BasicStroke(5));
         f.draw(g);
     }
 }
