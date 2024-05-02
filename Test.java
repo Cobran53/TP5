@@ -50,7 +50,9 @@ class Test {
 
     public static void main(String[] args){
 
-        // liste de test pour 4.5
+        // on utilise Rouge et Bleu comme des raccourcis pour new ColoredFigure(..., new Color(0,0,255))
+
+        // liste de tests pour 4.6
         // 1) on s'attend à avoir un cercle bleu dans un carré bleu, et on a bien ça
         /* new Bleu(
             new Groupe (
@@ -76,13 +78,43 @@ class Test {
             )
         ) */
 
-        MaFenetre fen = new MaFenetre(
+        // liste de tests pour 4.8
+        // 1) on s'attend à avoir un carré rouge normal, et un cercle noir gras. Au final, les deux sont rouges.
+        /* new Groupe (
             new Rouge(
-                new Groupe(
-                    new Bleu(new Cercle(10, 10, 50)),
-                    new Rectangle(10, 10, 50, 50)
-                )
+                new Rectangle(10, 10, 50, 50)
+            ),
+            new Gras (
+                new Cercle(10, 10, 50)
             )
+        ) */
+        // 2) on s'attend à avoir un carré rouge normal, et un cercle noir gras. Au final, les deux sont gras.
+        /* new Groupe (
+            new Gras (
+                new Cercle(10, 10, 50)
+            ),
+            new Rouge(
+                new Rectangle(10, 10, 50, 50)
+            )
+        ) */
+        // 3) on s'attend à avoir un carré rouge gras, on a ça
+        /* new Gras (
+            new Rouge(
+                new Rectangle(10, 10, 50, 50)
+            )
+        ) */
+        // 4) on s'attend à avoir un carré rouge gras, on a ça
+        /* new Rouge (
+            new Gras (
+                new Rectangle(10, 10, 50, 50)
+            )   
+        )  */
+        MaFenetre fen = new MaFenetre(
+            new Rouge (
+                new Gras (
+                    new Rectangle(10, 10, 50, 50)
+                )   
+            ) 
         );
 
         fen.setVisible(true);
