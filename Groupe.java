@@ -13,4 +13,6 @@ public class Groupe implements Figure { // le groupe implémente l'interface Fig
         a.draw(g);
         b.draw(g);
     }
+
+    
 }
